@@ -1,0 +1,271 @@
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+  font-family: 'Roboto Mono', monospace;
+  margin: 0 auto;
+}
+
+html{
+  font-size: 10px;
+}
+
+header{
+  height: 0%;
+  background: #fff;
+  float: left;
+}
+
+.wideHeader{
+  width: 20%;
+  background: #fff;
+  height: 100%;
+}
+
+.tab{
+  width: 5%;
+  height: 100%;
+  background: #fff;
+  border-right: 5px solid #252525;
+  border-left: .5px solid #252525;
+  float: left;
+  margin-right: 75px;
+}
+
+.block{
+  display: block;
+}
+
+.rightArrow{
+  width: 60px;
+  margin-top: 500%;
+  float: left;
+}
+
+.rightArrow:hover{
+  background: #fff;
+}
+
+.leftArrow{
+  width: 60px;
+  margin-top: 500%;
+  float: left;
+}
+
+.leftArrow:hover{
+  background: #fff;
+}
+
+.hero{
+  background-color: #efefef;
+  height: 620px;
+  clear: both;
+}
+
+nav{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+nav h2{
+  display: block;
+  margin: 40px 12%;
+  float: left;
+  font-size: 2rem;
+}
+
+nav a{
+  color: #000;
+}
+
+
+nav h2:hover{
+  border-bottom: 2px solid #252525;
+}
+
+.who{
+  background: #cccccc;
+  height: 25%;
+}
+
+.drawing{
+  background: #6ffdac;
+  height: 25%;
+}
+
+.design{
+  background: #fe7678;
+  height: 25%;
+}
+
+.development{
+  background: #00d6f2;
+  height: 25%;
+}
+
+.main{
+  overflow: hidden;
+  height: 100%;
+  margin-left: 110px;
+}
+
+.logo{
+  margin: 20px 50px 0 0;
+  float: right;
+}
+
+.logo img{
+  width: 75px;
+}
+
+.whoBlurb{
+  width: 80%;
+  height: 100px;
+  float: left;
+  margin-top: 115px;
+}
+
+.whoBlurb h1{
+  font-size: 3.5rem;
+  float: left;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #ccc;
+}
+
+.whoBlurb p{
+  font-size: 1.5rem;
+  clear: left;
+}
+
+.clients{
+  width: 75%;
+  height: 200px;
+  float: left;
+  clear: both;
+  margin-top: 105px;
+}
+
+.clients h2{
+  font-size: 2.5rem;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.clients p{
+  font-size: 1.5rem;
+  clear: left;
+}
+
+.findMe{
+  width: 30%;
+  border: .5px solid grey;
+  border-top: 5px solid black;
+  height: 200px;
+  float: left;
+  clear: left;
+  margin-top: -70px;
+}
+
+@media (min-width: 375px) and (max-width: 768px){
+  .hero{
+    height: 667px;
+  }
+
+  header{
+    overflow: hidden;
+  }
+
+  .wideHeader{
+    width: 73%;
+  }
+
+  .tab{
+    width: 7%;
+  }
+
+  .main{
+    margin-left: 100px;
+  }
+
+  .whoBlurb{
+    margin-top: 60px;
+  }
+
+  .whoBlurb h1{
+    font-size: 3rem;
+  }
+
+  .whoBlurb p, .clients p{
+    margin-top: 60px;
+    font-size: 1rem;
+  }
+  .clients{
+    margin-top: 189px;
+  }
+
+  .clients h2{
+    margin-top: 30px;
+  }
+
+  .rightArrow{
+    margin-top: 333px;
+  }
+
+  .leftArrow{
+    margin-top: 333px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .hero{
+    height: 1024px;
+  }
+
+  header{
+    overflow: hidden;
+  }
+
+  .wideHeader{
+    width: 83%;
+  }
+
+  .tab{
+    width: 7%;
+  }
+
+  .main{
+    margin-left: 100px;
+  }
+
+  .whoBlurb{
+    margin-top: 115px;
+  }
+
+  .whoBlurb h1, .clients h2{
+    font-size: 4.5rem;
+  }
+
+  .clients h2{
+    font-size: 3rem;
+  }
+
+  .whoBlurb p, .clients p{
+    font-size: 2rem;
+
+  }
+
+  .clients{
+    margin-top: 365px;
+  }
+
+  .rightArrow{
+    margin-top: 512px;
+  }
+
+  .leftArrow{
+    margin-top: 512px;
+  }
+}
+
+}
