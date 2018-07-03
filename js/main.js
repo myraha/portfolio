@@ -2,7 +2,7 @@
 
 //event listeners to open/close navigation panel
 $("#openNavigation").on("click",function(){
-	$(".header").toggleClass("wideHeader");
+	$(".header").toggleClass("wideHeader")
 	$("#closeNavigation").css("display","block")
 	$("#openNavigation").css("display","none")
 });

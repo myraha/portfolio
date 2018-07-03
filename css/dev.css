@@ -16,6 +16,12 @@ header{
   float: left;
 }
 
+.hero{
+  background-color: #efefef;
+  height: 655px;
+  clear: both;
+}
+
 .wideHeader{
   width: 20%;
   background: #fff;
@@ -44,7 +50,6 @@ header{
 
 .rightArrow:hover{
   background: #fff;
-
 }
 
 .leftArrow{
@@ -57,10 +62,22 @@ header{
   background: #fff;
 }
 
-.hero{
-  background-color: #efefef;
-  height: 680px;
+.social ul{
+  float: left;
+  margin: 20px 0 20px -65px;
+  height: 50px;
+  width: 310px;
+}
+
+.social li{
+  list-style: none;
+  display: inline-block;
   clear: both;
+  margin-left: 10%;
+}
+
+.social img{
+  width: 35px;
 }
 
 nav{
@@ -121,17 +138,15 @@ nav h2:hover{
 }
 
 .whoBlurb{
-  width: 71%;
   height: 100px;
-  float: left;
   margin-top: 115px;
 }
 
 .whoBlurb h1{
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   float: left;
   margin-bottom: 20px;
-  border-bottom: 5px solid #00d6f2;
+  border-bottom: 4px solid #00d6f2;
 }
 
 .whoBlurb p{
@@ -198,6 +213,11 @@ nav h2:hover{
   background-color: #000;
 }
 
+footer{
+  height: 25px;
+  background: #000;
+}
+
 @media (min-width: 375px) and (max-width: 768px){
   .hero{
     height: 1500px;
@@ -212,7 +232,8 @@ nav h2:hover{
   }
 
   .tab{
-    width: 7%;
+    width: 14%;
+    margin-right: 42px;
   }
 
   .main{
@@ -256,11 +277,17 @@ nav h2:hover{
   }
 
   .wideHeader{
-    width: 83%;
+    width: 54%;
   }
 
   .tab{
-    width: 7%;
+    width: 9%;
+    margin-right: 80px;
+  }
+
+  nav h2{
+    margin: 57px 12%;
+    font-size: 3rem;
   }
 
   .main{
