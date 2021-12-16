@@ -21,27 +21,40 @@ body {
   clear: both;
 }
 
-header {
-  height: 0;
-  background: #fff;
-  float: left;
-  overflow: hidden;
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 25px;
 }
 
-.wideHeader {
-  width: 20%;
+.hero--sidebarOpen .sidebar {
+  width: 230px;
   background: #fff;
-  min-height: 100vh;
+  display: flex;
+}
+
+.hero--sidebarOpen .header {
+  width: 170px;
+  display: block;
+}
+
+.hero--sidebarOpen .main {
+  margin-left: 270px;
+}
+
+header {
+  display: none;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
 }
 
 .tab {
   width: 60px;
-  min-height: 100vh;
+  height: 100%;
   background: #fff;
   border-right: 5px solid #252525;
   border-left: 0.5px solid #252525;
-  float: left;
-  margin-right: 50px;
   position: relative;
 }
 
@@ -213,17 +226,12 @@ footer {
     display: none;
   }
 
-  .wideHeader {
-    width: 66%;
+  .hero--sidebarOpen .sidebar {
+    width: 300px;
   }
 
-  .tab {
-    width: 14%;
-    margin-right: 42px;
-  }
-
-  .main {
-    margin-left: 0;
+  .hero--sidebarOpen .header {
+    width: 240px;
   }
 
   .social ul {
@@ -256,13 +264,14 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .wideHeader {
-    width: 54%;
+  .hero--sidebarOpen .sidebar {
+    /* width: 54%; */
+    width: 400px;
   }
 
-  .tab {
-    width: 9%;
-    margin-right: 80px;
+  .hero--sidebarOpen .header {
+    /* width: 54%; */
+    width: 340px;
   }
 
   nav h2 {
