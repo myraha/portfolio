@@ -6,191 +6,195 @@
   margin: 0 auto;
 }
 
-html{
+html {
   font-size: 10px;
 }
 
-body{
+body {
   background: #000;
+  min-height: 100vh;
 }
 
-.hero{
+.hero {
   background-color: #efefef;
-  height: 655px;
+  min-height: 100vh;
   clear: both;
 }
 
-header{
-  height: 0%;
+header {
+  height: 0;
   background: #fff;
   float: left;
+  overflow: hidden;
 }
 
-.wideHeader{
+.wideHeader {
   width: 20%;
   background: #fff;
-  height: 100%;
+  min-height: 100vh;
 }
 
-.tab{
+.tab {
   width: 60px;
-  height: 100%;
+  min-height: 100vh;
   background: #fff;
   border-right: 5px solid #252525;
-  border-left: .5px solid #252525;
+  border-left: 0.5px solid #252525;
   float: left;
   margin-right: 50px;
+  position: relative;
 }
 
-.block{
+.block {
   display: block;
 }
 
-.rightArrow{
-  width: 58px;
-  margin-top: 500%;
+.rightArrow,
+.leftArrow {
   float: left;
+  width: 58px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.rightArrow:hover{
+.rightArrow:hover {
   background: #fff;
 }
 
-.leftArrow{
-  width: 58px;
-  margin-top: 500%;
-  float: left;
-}
-
-.leftArrow:hover{
+.leftArrow:hover {
   background: #fff;
 }
 
-.social ul{
+.social ul {
   float: left;
   margin: 20px 0 20px -65px;
   height: 50px;
   width: 310px;
 }
 
-.social li{
+.social li {
   list-style: none;
   display: inline-block;
   clear: both;
   margin-left: 10%;
 }
 
-.social img{
+.social img {
   width: 35px;
 }
 
-nav{
+nav {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
+  display: grid;
 }
 
-nav h2{
+nav > * {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h2 {
   display: block;
-  margin: 40px 12%;
   float: left;
   font-size: 2rem;
 }
 
-nav a{
+nav a {
   color: #000;
 }
 
-nav h2:hover{
+nav h2:hover {
   border-bottom: 2px solid #252525;
 }
 
-.who{
+.who {
   background: #cccccc;
-  height: 25%;
 }
 
-.drawing{
+.drawing {
   background: #6ffdac;
-  height: 25%;
 }
 
-.design{
+.design {
   background: #fe7678;
-  height: 25%;
 }
 
-.development{
+.development {
   background: #00d6f2;
-  height: 25%;
 }
 
-.main{
+.main {
   overflow: hidden;
   height: 100%;
   margin-left: 110px;
 }
 
-.closedMain{
+.closedMain {
   display: none;
 }
 
-
-.logo{
+.logo {
   margin: 20px 50px 0 0;
   float: right;
 }
 
-.logo img{
+.logo img {
   width: 65px;
 }
 
-.whoBlurb{
+.whoBlurb {
+  max-width: 900px;
   width: 83%;
-  height: 180px;
   float: left;
   margin-top: 85px;
   clear: left;
 }
 
-.wideWhoBlurb{
+.wideWhoBlurb {
   width: 90%;
 }
 
-.whoBlurb h1{
+.whoBlurb h1 {
   font-size: 3.5rem;
   float: left;
   margin-bottom: 20px;
   border-bottom: 5px solid #ccc;
 }
 
-.whoBlurb p{
+.whoBlurb p {
   font-size: 1.5rem;
   clear: left;
+  line-height: 1.5;
 }
 
-.clients{
+.clients {
+  max-width: 900px;
   width: 75%;
-  height: 200px;
   float: left;
   clear: both;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
-.clients h2{
+.clients h2 {
   font-size: 2.5rem;
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
-.clients p{
+.clients p {
+  line-height: 1.5;
   font-size: 1.5rem;
   clear: left;
 }
 
-.findMe{
+.findMe {
   width: 30%;
-  border: .5px solid grey;
+  border: 0.5px solid grey;
   border-top: 5px solid black;
   height: 200px;
   float: left;
@@ -198,138 +202,101 @@ nav h2:hover{
   margin-top: -70px;
 }
 
-footer{
+footer {
   height: 25px;
   background: #000;
 }
 
-@media (min-width: 375px) and (max-width: 768px){
-  .hero{
-    height: 657px;
-  }
-
-  .logo img{
+@media (min-width: 375px) and (max-width: 768px) {
+  .logo img {
     width: 50px;
     display: none;
   }
 
-  header{
-    overflow: hidden;
-  }
-
-  .wideHeader{
+  .wideHeader {
     width: 66%;
   }
 
-  .tab{
+  .tab {
     width: 14%;
     margin-right: 42px;
   }
 
-  .main{
+  .main {
     margin-left: 0;
   }
 
-  .social ul{
+  .social ul {
     margin: 30px 0 20px -51px;
   }
 
-  .social li{
+  .social li {
     margin-left: 7%;
   }
 
-  .whoBlurb{
+  .whoBlurb {
     margin-top: 20px;
-    height: 300px;
   }
 
-  .whoBlurb h1{
+  .whoBlurb h1 {
     font-size: 2.2rem;
   }
 
-  .whoBlurb p, .clients p{
-    /* margin-top: 60px; */
+  .whoBlurb p,
+  .clients p {
     font-size: 1rem;
   }
-  .clients{
-    margin-top: -40px;
+  .clients {
+    margin-top: 35px;
   }
 
-  .clients h2{
+  .clients h2 {
     font-size: 2rem;
-  }
-
-  .rightArrow{
-    margin-top: 333px;
-  }
-
-  .leftArrow{
-    margin-top: 333px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-  .hero{
-    height: 1000px;
-  }
-
-  header{
-    overflow: hidden;
-  }
-
-  .wideHeader{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wideHeader {
     width: 54%;
   }
 
-  .tab{
+  .tab {
     width: 9%;
     margin-right: 80px;
   }
 
-  nav h2{
-    margin: 57px 12%;
+  nav h2 {
     font-size: 3rem;
   }
 
-  .main{
+  .main {
     margin-left: 100px;
   }
 
-  .whoBlurb{
+  .whoBlurb {
     margin-top: 75px;
   }
 
-  .whoBlurb h1, .clients h2{
+  .whoBlurb h1,
+  .clients h2 {
     font-size: 4.5rem;
   }
 
-  .whoBlurb p, .clients p{
+  .whoBlurb p,
+  .clients p {
     font-size: 2rem;
   }
 
-  .clients{
-    margin-top: 145px;
-  }
-
-  .clients h2{
+  .clients h2 {
     font-size: 3rem;
   }
 
-  .rightArrow{
-    margin-top: 512px;
-  }
-
-  .leftArrow{
-    margin-top: 512px;
-  }
-
-  .find{
+  .find {
     width: 90%;
   }
 
-  .findMe{
+  .findMe {
     width: 46%;
     float: left;
   }
-
 }
