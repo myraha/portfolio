@@ -11,7 +11,6 @@ html {
 }
 
 body {
-  background: #000;
   min-height: 100vh;
 }
 
@@ -23,7 +22,8 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
-  bottom: 25px;
+  bottom: 0;
+  z-index: 1;
 }
 
 .hero--sidebarOpen .sidebar {
@@ -161,7 +161,7 @@ nav h2:hover {
 
 .whoBlurb {
   max-width: 900px;
-  margin-top: 85px;
+  margin-top: 105px;
 }
 
 .wideWhoBlurb {
@@ -182,7 +182,6 @@ nav h2:hover {
 
 .clients {
   max-width: 900px;
-  width: 75%;
   margin-top: 50px;
 }
 
@@ -201,12 +200,13 @@ nav h2:hover {
   border: 0.5px solid grey;
   border-top: 5px solid black;
   height: 200px;
-  margin-top: 7em;
 }
 
 footer {
   height: 25px;
   background: #000;
+  position: relative;
+  z-index: 10;
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -313,6 +313,10 @@ footer {
   border-bottom: 4px solid #fe7678;
 }
 
+/*************************
+      Drawing Page
+**************************/
+
 .page--drawing .whoBlurb h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -321,4 +325,92 @@ footer {
 
 .page--drawing .whoBlurb {
   margin-top: 50px;
+}
+
+.page--drawing .findMe {
+  width: 30%;
+  margin: 0 2.5% 2.5% 0;
+  padding: 1%;
+  border: 0.5px solid #252525;
+  border-top: 5px solid black;
+  height: 175px;
+}
+
+/*************************
+    Development Page
+**************************/
+
+.page--dev .find {
+  max-width: 1400px;
+  width: 75%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 23px;
+}
+
+.page--dev .whoBlurb {
+  margin-top: 50px;
+}
+
+.page--dev .whoBlurb h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #00d6f2;
+}
+
+.page--dev .findMe {
+  margin: 0;
+  padding: 3%;
+  border: 0.5px solid #252525;
+  border-top: 5px solid black;
+  height: 175px;
+  width: 100%;
+}
+
+.page--dev .findMe1,
+.page--dev .findMe2,
+.page--dev .findMe3,
+.page--dev .findMe4,
+.page--dev .findMe5,
+.page--dev .findMe6 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.page--dev .findMe1 {
+  background: no-repeat url('../assets/carousel.jpg');
+  background-size: cover;
+}
+
+.page--dev .findMe2 {
+  background: no-repeat url('../assets/cherry.png');
+  background-size: contain;
+  display: block;
+  margin: 0 15%;
+}
+
+.page--dev .findMe3 {
+  background: #2f4efe;
+  background-size: cover;
+}
+
+.page--dev .findMe4 {
+  background: no-repeat url('../assets/rock.png');
+  background-size: contain;
+}
+
+.page--dev .findMe5 {
+  background: #6ffdac;
+  background-size: cover;
+}
+
+.page--dev .findMe6 {
+  background: no-repeat url('../assets/stop.png');
+  background-size: cover;
+}
+
+.findMeImg a:hover {
+  background-color: #000;
 }
