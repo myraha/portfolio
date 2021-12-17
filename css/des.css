@@ -1,338 +1,134 @@
-* {
-  -moz-box-sizing: border-box; /* Firexfox */
-  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-  box-sizing: border-box; /* IE */
-  font-family: 'Roboto Mono', monospace;
-  margin: 0 auto;
-}
-
-html{
-  font-size: 10px;
-}
-
-body{
-  background: #000;
-}
-
-header{
-  height: 0%;
-  background: #fff;
-  float: left;
-}
-
-.hero{
-  background-color: #efefef;
-  height: 655px;
-  clear: both;
-}
-
-.wideHeader{
-  width: 20%;
-  background: #fff;
-  height: 100%;
-}
-
-.tab{
-  width: 5%;
-  height: 100%;
-  background: #fff;
-  border-right: 5px solid #252525;
-  border-left: .5px solid #252525;
-  float: left;
-  margin-right: 75px;
-}
-
-.block{
-  display: block;
-}
-
-.rightArrow{
-  width: 60px;
-  margin-top: 500%;
-  float: left;
-}
-
-.rightArrow:hover{
-  background: #fff;
-}
-
-.leftArrow{
-  width: 60px;
-  margin-top: 500%;
-  float: left;
-}
-
-.leftArrow:hover{
-  background: #fff;
-}
-
-.social ul{
-  float: left;
-  margin: 20px 0 20px -65px;
-  height: 50px;
-  width: 310px;
-}
-
-.social li{
-  list-style: none;
-  display: inline-block;
-  clear: both;
-  margin-left: 10%;
-}
-
-.social img{
-  width: 35px;
-}
-
-nav{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-nav h2{
-  display: block;
-  margin: 40px 12%;
-  float: left;
-  font-size: 2rem;
-}
-
-nav a{
-  color: #000;
-}
-
-
-nav h2:hover{
-  border-bottom: 2px solid #252525;
-}
-
-.who{
-  background: #cccccc;
-  height: 25%;
-}
-
-.drawing{
-  background: #6ffdac;
-  height: 25%;
-}
-
-.design{
-  background: #fe7678;
-  height: 25%;
-}
-
-.development{
-  background: #00d6f2;
-  height: 25%;
-}
-
-.main{
+.main {
   overflow: hidden;
   height: 100%;
   margin-left: 110px;
 }
 
-.logo{
+.logo {
   margin: 20px 50px 0 0;
   float: right;
 }
 
-.logo img{
+.logo img {
   width: 75px;
 }
 
-.whoBlurb{
-  height: 100px;
-  margin-top: 115px;
-}
-
-.whoBlurb h1{
+.whoBlurb h1 {
   font-size: 2.5rem;
   float: left;
   margin-bottom: 20px;
   border-bottom: 4px solid #fe7678;
 }
 
-.whoBlurb p{
+.whoBlurb p {
   font-size: 1.5rem;
   clear: left;
 }
 
-.find{
+.find {
   width: 75%;
   margin-top: 35px;
   float: left;
 }
 
-.findMe{
+.findMe {
   width: 30%;
   margin: 0 2.5% 2.5% 0;
   padding: 1%;
-  border: .5px solid #252525;
+  border: 0.5px solid #252525;
   border-top: 5px solid black;
   height: 175px;
   float: left;
-
 }
 
-.findMe1, .findMe2, .findMe3, .findMe4, .findMe5, .findMe6{
+.findMe1,
+.findMe2,
+.findMe3,
+.findMe4,
+.findMe5,
+.findMe6 {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-.findMe1{
-  background: no-repeat url("../assets/carousel.jpg") ;
+.findMe1 {
+  background: no-repeat url('../assets/carousel.jpg');
   background-size: cover;
 }
 
-.findMe2{
-  background: no-repeat url("../assets/cherry.png") ;
+.findMe2 {
+  background: no-repeat url('../assets/cherry.png');
   background-size: contain;
   display: block;
   margin: 0 15%;
 }
 
-.findMe3{
-  background: #2f4efe ;
+.findMe3 {
+  background: #2f4efe;
   background-size: cover;
 }
 
-.findMe4{
-  background: no-repeat url("../assets/rock.png") ;
+.findMe4 {
+  background: no-repeat url('../assets/rock.png');
   background-size: contain;
 }
 
-.findMe5{
+.findMe5 {
   background: #6ffdac;
   background-size: cover;
 }
 
-.findMe6{
-  background: no-repeat url("../assets/stop.png") ;
+.findMe6 {
+  background: no-repeat url('../assets/stop.png');
   background-size: cover;
 }
 
-.findMeImg a:hover{
+.findMeImg a:hover {
   background-color: #000;
 }
 
-footer{
-  height: 25px;
-  background: #000;
-}
-
-@media (min-width: 375px) and (max-width: 768px){
-  .hero{
-    height: 1500px;
-  }
-
-  header{
-    overflow: hidden;
-  }
-
-  .wideHeader{
-    width: 73%;
-  }
-
-  .tab{
-    width: 17%;
-    margin-right: 37px;
-  }
-
-  .main{
+@media (min-width: 375px) and (max-width: 768px) {
+  .main {
     margin-left: 100px;
   }
 
-  .logo{
+  .logo {
     display: none;
   }
 
-  .whoBlurb{
-    margin-top: 60px;
-    width: 100%;
-  }
-
-  .whoBlurb h1{
-    font-size: 2rem;
-    margin-top: 20px;
-  }
-
-  .rightArrow{
-    margin-top: 333px;
-  }
-
-  .leftArrow{
-    margin-top: 333px;
-  }
-
-  .find{
+  .find {
     width: 84%;
     margin-top: 92px;
   }
 
-  .findMe{
+  .findMe {
     width: 100%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-  .hero{
-    height: 1024px;
-  }
-
-  header{
-    overflow: hidden;
-  }
-
-  .wideHeader{
-    width: 54%;
-  }
-
-  .tab{
-    width: 9%;
-    margin-right: 80px;
-  }
-
-  nav h2{
-    margin: 57px 12%;
-    font-size: 3rem;
-  }
-
-  .main{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
     margin-left: 100px;
   }
 
-  .whoBlurb{
+  .whoBlurb {
     margin-top: 158px;
   }
 
-  .whoBlurb h1, {
+  .whoBlurb h1 {
     font-size: 3.5rem;
   }
 
-  .whoBlurb p, .clients p{
-    font-size: 2rem;
-  }
-
-  .rightArrow{
-    margin-top: 512px;
-  }
-
-  .leftArrow{
-    margin-top: 512px;
-  }
-
-  .find{
+  .find {
     width: 94%;
     margin-top: 135px;
     float: left;
   }
 
-  .findMe{
+  .findMe {
     width: 45%;
     float: left;
     clear: none;
   }
-
 }
