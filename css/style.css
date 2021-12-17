@@ -359,6 +359,15 @@ footer {
       Drawing Page
 **************************/
 
+.page--drawing .find {
+  max-width: 1400px;
+  width: 75%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 23px;
+}
+
 .page--drawing .whoBlurb h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -370,12 +379,12 @@ footer {
 }
 
 .page--drawing .findMe {
-  width: 30%;
-  margin: 0 2.5% 2.5% 0;
-  padding: 1%;
+  margin: 0;
+  padding: 3%;
   border: 0.5px solid #252525;
   border-top: 5px solid black;
   height: 175px;
+  width: 100%;
 }
 
 /*************************
