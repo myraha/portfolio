@@ -389,14 +389,6 @@ footer {
   .clients h2 {
     font-size: 3rem;
   }
-
-  .find {
-    width: 90%;
-  }
-
-  .findMe {
-    width: 46%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -430,7 +422,7 @@ footer {
 
   .whoBlurb p,
   .clients p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .clients {
     margin-top: 35px;
@@ -462,6 +454,10 @@ footer {
   .main,
   .hero--sidebarOpen .main {
     margin-left: 85px;
+  }
+
+  .page--dev .whoBlurb {
+    margin-top: 20px;
   }
 
   .whoBlurb h1 {
