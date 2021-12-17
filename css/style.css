@@ -201,9 +201,7 @@ nav h2:hover {
   border: 0.5px solid grey;
   border-top: 5px solid black;
   height: 200px;
-  float: left;
-  clear: left;
-  margin-top: -70px;
+  margin-top: 7em;
 }
 
 footer {
