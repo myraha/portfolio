@@ -6,6 +6,11 @@
   margin: 0;
 }
 
+:root {
+  --sidebarWidth: 22%;
+  --footerHeight: 25px;
+}
+
 html {
   font-size: 10px;
 }
@@ -16,7 +21,10 @@ body {
 
 .hero {
   background-color: #efefef;
-  min-height: 100vh;
+  min-height: -webkit-calc(100vh - 25px);
+  min-height: -moz-calc(100vh - 25px);
+  min-height: calc(100vh - 25px);
+  padding-bottom: 3em;
 }
 
 .sidebar {
@@ -24,21 +32,26 @@ body {
   top: 0;
   bottom: 0;
   z-index: 1;
+  max-width: 400px;
 }
 
 .hero--sidebarOpen .sidebar {
-  width: 230px;
+  width: var(--sidebarWidth);
   background: #fff;
   display: flex;
 }
 
 .hero--sidebarOpen .header {
-  width: 170px;
+  width: -webkit-calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: calc(100% - 60px);
   display: block;
 }
 
 .hero--sidebarOpen .main {
-  margin-left: 270px;
+  margin-left: -webkit-calc(var(--sidebarWidth) + 60px);
+  margin-left: -moz-calc(var(--sidebarWidth) + 60px);
+  margin-left: calc(var(--sidebarWidth) + 60px);
 }
 
 header {
@@ -63,7 +76,6 @@ header {
 
 .rightArrow,
 .leftArrow {
-  float: left;
   width: 58px;
   position: absolute;
   top: 50%;
@@ -76,24 +88,6 @@ header {
 
 .leftArrow:hover {
   background: #fff;
-}
-
-.social ul {
-  float: left;
-  margin: 20px 0 20px -65px;
-  height: 50px;
-  width: 310px;
-}
-
-.social li {
-  list-style: none;
-  display: inline-block;
-  clear: both;
-  margin-left: 10%;
-}
-
-.social img {
-  width: 35px;
 }
 
 nav {
@@ -112,12 +106,12 @@ nav > * {
 
 nav h2 {
   display: block;
-  float: left;
   font-size: 2rem;
 }
 
 nav a {
   color: #000;
+  text-decoration: none;
 }
 
 nav h2:hover {
@@ -146,12 +140,35 @@ nav h2:hover {
   margin-left: 110px;
 }
 
+.main__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social ul {
+  margin: 20px 0 20px 0;
+  padding: 0;
+}
+
+.social li {
+  list-style: none;
+  display: inline-block;
+}
+
+.social li + li {
+  margin-left: 2.6em;
+}
+
+.social img {
+  width: 35px;
+}
+
 .closedMain {
   display: none;
 }
 
 .logo {
-  margin: 20px 50px 0 auto;
+  margin: 20px 50px 0 0;
   width: max-content;
 }
 
@@ -159,8 +176,13 @@ nav h2:hover {
   width: 65px;
 }
 
-.whoBlurb {
+.whoBlurb,
+.clients {
+  width: 80%;
   max-width: 900px;
+}
+
+.whoBlurb {
   margin-top: 105px;
 }
 
@@ -181,7 +203,6 @@ nav h2:hover {
 }
 
 .clients {
-  max-width: 900px;
   margin-top: 50px;
 }
 
@@ -203,72 +224,24 @@ nav h2:hover {
 }
 
 footer {
-  height: 25px;
+  height: var(--footerHeight);
   background: #000;
   position: relative;
   z-index: 10;
 }
 
-@media (min-width: 375px) and (max-width: 768px) {
-  .logo img {
-    width: 50px;
-    display: none;
-  }
-
+@media (max-width: 1024px) {
   .hero--sidebarOpen .sidebar {
-    width: 300px;
-  }
-
-  .hero--sidebarOpen .header {
-    width: 240px;
-  }
-
-  .social ul {
-    margin: 30px 0 20px -51px;
-  }
-
-  .social li {
-    margin-left: 7%;
-  }
-
-  .whoBlurb {
-    margin-top: 20px;
-  }
-
-  .whoBlurb h1 {
-    font-size: 2.2rem;
-  }
-
-  .whoBlurb p,
-  .clients p {
-    font-size: 1rem;
-  }
-  .clients {
-    margin-top: 35px;
-  }
-
-  .clients h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hero--sidebarOpen .sidebar {
-    /* width: 54%; */
     width: 400px;
-  }
-
-  .hero--sidebarOpen .header {
-    /* width: 54%; */
-    width: 340px;
   }
 
   nav h2 {
     font-size: 3rem;
   }
 
-  .main {
-    margin-left: 100px;
+  .main,
+  .hero--sidebarOpen .main {
+    margin-left: 110px;
   }
 
   .whoBlurb {
@@ -295,7 +268,76 @@ footer {
 
   .findMe {
     width: 46%;
-    float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 50px;
+  }
+
+  .social li + li {
+    margin-left: 1em;
+  }
+
+  .social img {
+    width: 25px;
+  }
+
+  .hero--sidebarOpen .sidebar {
+    width: 300px;
+  }
+
+  .hero--sidebarOpen .header {
+    width: 240px;
+  }
+
+  .whoBlurb {
+    margin-top: 20px;
+  }
+
+  .whoBlurb h1 {
+    font-size: 2.5rem;
+  }
+
+  .whoBlurb p,
+  .clients p {
+    font-size: 1.2rem;
+  }
+  .clients {
+    margin-top: 35px;
+  }
+
+  .clients h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .tab {
+    width: 45px;
+  }
+
+  .rightArrow,
+  .leftArrow {
+    width: 45px;
+  }
+
+  .main__head {
+    flex-direction: column;
+  }
+
+  .main .social {
+    order: 2;
+  }
+
+  .main,
+  .hero--sidebarOpen .main {
+    margin-left: 85px;
+  }
+
+  .whoBlurb h1 {
+    font-size: 2.2rem;
   }
 }
 
