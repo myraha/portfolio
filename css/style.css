@@ -97,8 +97,11 @@ nav {
   display: grid;
 }
 
-nav > * {
-  width: 100%;
+nav section a {
+  height: 100%;
+}
+
+nav section > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,117 +233,6 @@ footer {
   z-index: 10;
 }
 
-@media (max-width: 1024px) {
-  .hero--sidebarOpen .sidebar {
-    width: 400px;
-  }
-
-  nav h2 {
-    font-size: 3rem;
-  }
-
-  .main,
-  .hero--sidebarOpen .main {
-    margin-left: 110px;
-  }
-
-  .whoBlurb {
-    margin-top: 75px;
-  }
-
-  .whoBlurb h1,
-  .clients h2 {
-    font-size: 4.5rem;
-  }
-
-  .whoBlurb p,
-  .clients p {
-    font-size: 2rem;
-  }
-
-  .clients h2 {
-    font-size: 3rem;
-  }
-
-  .find {
-    width: 90%;
-  }
-
-  .findMe {
-    width: 46%;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    width: 50px;
-  }
-
-  .social li + li {
-    margin-left: 1em;
-  }
-
-  .social img {
-    width: 25px;
-  }
-
-  .hero--sidebarOpen .sidebar {
-    width: 300px;
-  }
-
-  .hero--sidebarOpen .header {
-    width: 240px;
-  }
-
-  .whoBlurb {
-    margin-top: 20px;
-  }
-
-  .whoBlurb h1 {
-    font-size: 2.5rem;
-  }
-
-  .whoBlurb p,
-  .clients p {
-    font-size: 1.2rem;
-  }
-  .clients {
-    margin-top: 35px;
-  }
-
-  .clients h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .tab {
-    width: 45px;
-  }
-
-  .rightArrow,
-  .leftArrow {
-    width: 45px;
-  }
-
-  .main__head {
-    flex-direction: column;
-  }
-
-  .main .social {
-    order: 2;
-  }
-
-  .main,
-  .hero--sidebarOpen .main {
-    margin-left: 85px;
-  }
-
-  .whoBlurb h1 {
-    font-size: 2.2rem;
-  }
-}
-
 /*************************
       Design Page
 **************************/
@@ -464,4 +356,120 @@ footer {
 
 .findMeImg a:hover {
   background-color: #000;
+}
+
+@media (max-width: 1024px) {
+  .hero--sidebarOpen .sidebar {
+    width: 400px;
+  }
+
+  nav h2 {
+    font-size: 3rem;
+  }
+
+  .main,
+  .hero--sidebarOpen .main {
+    margin-left: 110px;
+  }
+
+  .whoBlurb {
+    margin-top: 75px;
+  }
+
+  .whoBlurb h1,
+  .clients h2 {
+    font-size: 4.5rem;
+  }
+
+  .whoBlurb p,
+  .clients p {
+    font-size: 2rem;
+  }
+
+  .clients h2 {
+    font-size: 3rem;
+  }
+
+  .find {
+    width: 90%;
+  }
+
+  .findMe {
+    width: 46%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 50px;
+  }
+
+  .social li + li {
+    margin-left: 1em;
+  }
+
+  .social img {
+    width: 25px;
+  }
+
+  .hero--sidebarOpen .sidebar {
+    width: 300px;
+  }
+
+  .hero--sidebarOpen .header {
+    width: 240px;
+  }
+
+  .whoBlurb {
+    margin-top: 20px;
+  }
+
+  .whoBlurb h1 {
+    font-size: 2.5rem;
+  }
+
+  .whoBlurb p,
+  .clients p {
+    font-size: 1.2rem;
+  }
+  .clients {
+    margin-top: 35px;
+  }
+
+  .clients h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .tab {
+    width: 45px;
+  }
+
+  .rightArrow,
+  .leftArrow {
+    width: 45px;
+  }
+
+  .main__head {
+    flex-direction: column;
+  }
+
+  .main .social {
+    order: 2;
+  }
+
+  .main,
+  .hero--sidebarOpen .main {
+    margin-left: 85px;
+  }
+
+  .whoBlurb h1 {
+    font-size: 2.2rem;
+  }
+
+  .page--drawing .find,
+  .page--dev .find {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
 }
